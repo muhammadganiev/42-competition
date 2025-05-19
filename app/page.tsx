@@ -10,7 +10,7 @@ export default function Home() {
       {/* Spline as background */}
       <Spline
         className="fixed inset-0 z-0 w-full h-full"
-        scene="https://draft.spline.design/sTM-lPPVR1G94Wdf/scene.splinecode"
+        scene="https://draft.spline.design/UYluxQEQP2zmRlVZ/scene.splinecode"
       />
       {/* Foreground content */}
       <div className="relative z-10 flex flex-col justify-center items-start h-full max-w-2xl w-full pl-4 sm:pl-8 md:pl-20 pr-4">
