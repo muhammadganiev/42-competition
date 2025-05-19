@@ -1,6 +1,10 @@
+"use client";
 import Spline from "@splinetool/react-spline";
+import React, { useState } from "react";
 
 export default function Home() {
+  const [count, setCount] = useState(0);
+
   return (
     <div className="relative w-screen h-screen bg-black overflow-hidden">
       {/* Spline as background */}
@@ -23,9 +27,17 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
           <span className="text-3xl font-bold text-white">AED 1500</span>
         </div>
-        <div className="flex gap-4">
-          <button className="bg-orange-500 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg text-lg shadow transition">
+        <div className="flex gap-4 relative">
+          <button
+            className="bg-orange-500 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg text-lg shadow transition relative"
+            onClick={() => setCount(count + 1)}
+          >
             Buy Now
+            {count > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold rounded-full px-2 py-0.5 shadow">
+                {count}
+              </span>
+            )}
           </button>
         </div>
       </div>
